@@ -1,0 +1,64 @@
+# .config/starship.toml
+
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
+# Disable the package module, hiding it from the prompt completely
+[package]
+disabled = true
+
+[character]
+error_symbol = "[λ](bold #A54242)"
+success_symbol = "[λ](bold #f8f8f2)"
+
+[cmd_duration]
+min_time = 5_000
+format = 'took [$duration]($style)'
+style = "bold #F0C674"
+
+[directory]
+style = "bold #af5fff"
+truncation_length = 2
+
+
+
+[golang]
+disabled = true
+
+[lua]
+disabled = true
+
+[git_branch]
+style = "bold #8a8c95"
+
+[git_status]
+style = "bold #8a8c95"
+
+[git_state]
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
+cherry_pick = '[🍒 PICKING](bold red)'
+
+[git_metrics]
+added_style = 'bold blue'
+format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
+
+[hostname]
+style = "bold #A54242"
+
+[docker_context]
+format = 'via [🐋 $context](blue bold)'
+
+[username]
+style_user = 'white bold'
+style_root = 'black bold'
+format = '[ruidias]($style) '
+disabled = false
+show_always = true
+
+[os]
+format = "on [($name )]($style)"
+style = "bold blue"
+disabled = false
